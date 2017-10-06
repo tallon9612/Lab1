@@ -8,14 +8,12 @@ public class Employee implements Runnable {
 	private int MangosProcessed;
 	private volatile boolean timeToWork;
 
-	// creates employee2 threads
+	// creates employee threads
 	Employee(int num) {
 		MangosProvided = 0;
 		MangosProcessed = 0;
 		thread = new Thread(this, "Employee[" + num + "]");
 	}
-	
-	
 
 	// start workers method
 	public void startWorkers() {

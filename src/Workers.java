@@ -204,10 +204,7 @@ public class Workers {
 
 	}
 
-//	private Object getName2() {
-//		// TODO Auto-generated method stub
-//		return  Thread2.currentThread().getName();
-//	}
+
 
 	// gets threads name and puts it in it statement
 	private Object getName() {

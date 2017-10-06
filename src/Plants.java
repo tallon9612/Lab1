@@ -1,7 +1,6 @@
 public class Plants {
-	
-	
-	//int for number of workers per plant
+
+	// int for number of workers per plant
 	private static final int Worker = 5;
 
 	// time for plants to run
@@ -16,7 +15,6 @@ public class Plants {
 			workergroup1[i] = new Employee(i);
 			workergroup1[i].startWorkers();
 		}
-
 
 		// makes as many employee threads as there are workers(plant 2)
 		Employee2[] workergroup2 = new Employee2[Worker];
@@ -37,12 +35,12 @@ public class Plants {
 		}
 
 		// Stop employee/worker group2, and wait for shutdown
-				for (Employee2 p : workergroup2) {
-					p.stopWork();
-				}
-				for (Employee2 p : workergroup2) {
-					p.waitToStop();
-				}
+		for (Employee2 p : workergroup2) {
+			p.stopWork();
+		}
+		for (Employee2 p : workergroup2) {
+			p.waitToStop();
+		}
 
 		// init values for provided mangos
 		int totalProvided = 0;
@@ -62,12 +60,12 @@ public class Plants {
 		}
 		// adds up the count of all ints used by workergroup2
 		// count total mangos and other items here
-				for (Employee2 p : workergroup2) {
-					totalProvided += p.getProvidedMangos();
-					totalProcessed += p.getProcessedMangos();
-					totalBottles += p.getBottles();
-					totalWasted += p.getWaste();
-				}
+		for (Employee2 p : workergroup2) {
+			totalProvided += p.getProvidedMangos();
+			totalProcessed += p.getProcessedMangos();
+			totalBottles += p.getBottles();
+			totalWasted += p.getWaste();
+		}
 
 		// Grand total
 		System.out.println("Total provided and processed = " + totalProvided + "/" + totalProcessed);
@@ -75,8 +73,8 @@ public class Plants {
 
 	}
 	// end of main
-	
-	//Delay method for timer
+
+	// Delay method for timer
 	private static void delay(long time, String errMsg) {
 		long sleepTime = Math.max(1, time);
 		try {
