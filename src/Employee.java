@@ -43,7 +43,7 @@ public class Employee implements Runnable {
 		System.out.println(Thread.currentThread().getName() + " Starting work");
 		while (timeToWork) {
 
-			processEntireMango(new Workers());
+			processMango(new Workers());
 
 			MangosProvided++;
 			// System.out.print(".");
@@ -74,7 +74,7 @@ public class Employee implements Runnable {
 	}
 
 	// runs process method if mangos are not bottled
-	public void processEntireMango(Workers w) {
+	public void processMango(Workers w) {
 		while (w.getState() != Workers.State.Finished) {
 			w.runProcess();
 		}

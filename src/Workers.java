@@ -29,7 +29,7 @@ public class Workers {
 	private State state;
 
 	// workers method
-	public Workers() {
+	public Mango() {
 		state = State.Fetched;
 		doWork();
 	}
@@ -203,8 +203,6 @@ public class Workers {
 		doWork();
 
 	}
-
-
 
 	// gets threads name and puts it in it statement
 	private Object getName() {
